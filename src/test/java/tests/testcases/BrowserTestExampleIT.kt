@@ -1,17 +1,18 @@
-package tests.browser
-import config.BrowserTest
+package tests.testcases
+import config.SeleniumTest
 import config.annotations.Browser
+import config.annotations.Browsers
 import config.annotations.Screenshot
 import config.driver.Breakpoint
 import io.qameta.allure.Description
 import org.fluentlenium.assertj.FluentLeniumAssertions.assertThat
 import org.fluentlenium.core.annotation.Page
 import org.junit.jupiter.api.Test
-import tests.browser.pageobjects.StartPage
+import tests.pageobjects.StartPage
 
-@Browser(dimension = Breakpoint.XLARGE)
+@Browser(dimension = Breakpoint.XLARGE, use = Browsers.CHROME)
 @Screenshot
-class BrowserTestExampleIT : BrowserTest() {
+class BrowserTestExampleIT : SeleniumTest() {
 
     @Page
     lateinit var page: StartPage

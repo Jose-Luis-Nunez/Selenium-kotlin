@@ -1,4 +1,4 @@
-package config
+package config.utils
 
 import org.junit.jupiter.api.extension.BeforeEachCallback
 import org.junit.jupiter.api.extension.ExtensionContext

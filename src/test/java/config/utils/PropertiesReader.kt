@@ -1,9 +1,9 @@
-package config
+package config.utils
 
 import java.util.*
 
 
-class Utils {
+class PropertiesReader {
 
     @Suppress("UNCHECKED_CAST")
     fun <T> getProp(key: String): T {

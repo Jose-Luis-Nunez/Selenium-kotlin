@@ -2,7 +2,7 @@ import com.adarshr.gradle.testlogger.TestLoggerPlugin
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.3.41"
+    kotlin("jvm") version "1.3.70"
     id("com.adarshr.test-logger") version "1.7.0"
     id("io.qameta.allure") version "2.8.1"
 }

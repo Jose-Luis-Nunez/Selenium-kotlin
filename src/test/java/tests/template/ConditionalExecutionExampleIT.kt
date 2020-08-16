@@ -1,4 +1,4 @@
-package tests.browser
+package tests.template
 
 import config.annotations.EnabledIfReachable
 import org.junit.jupiter.api.Test

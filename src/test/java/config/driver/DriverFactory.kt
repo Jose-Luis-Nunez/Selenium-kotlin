@@ -1,7 +1,8 @@
 package config.driver
 
-import config.Utils
-import config.driver.Browsers.*
+import config.utils.PropertiesReader
+import config.annotations.Browsers
+import config.annotations.Browsers.*
 import io.github.bonigarcia.wdm.WebDriverManager
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
@@ -89,7 +90,7 @@ class DriverFactory {
             return Browsers.byString(invokedBrowser)
         }
 
-        val defaultBrowser: String = Utils().getProp("default.browser") ?: "unsupported"
+        val defaultBrowser: String = PropertiesReader().getProp("default.browser") ?: "unsupported"
 
         return Browsers.byString(defaultBrowser)
     }
@@ -114,21 +115,5 @@ class DriverFactory {
         capabilities.isJavascriptEnabled = true
 
         return capabilities
-    }
-}
-
-enum class Browsers(val value: String) {
-    FIREFOX("firefox"),
-    FIREFOX_HEADLESS("firefox-headless"),
-    CHROME("chrome"),
-    CHROME_HEADLESS("chrome-headless"),
-    SAFARI("safari"),
-    OPERA("opera"),
-    EDGE("edge"),
-    INTERNET_EXPLORER("ie"),
-    DEFAULT("");
-
-    companion object {
-        fun byString(s: String) = Browsers.values().find { it.value == s } ?: throw RuntimeException("invalid browser '$s' requested")
     }
 }

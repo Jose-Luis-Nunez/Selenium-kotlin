@@ -1,4 +1,4 @@
-package tests.browser.pageobjects
+package tests.pageobjects
 
 import org.fluentlenium.core.FluentPage
 import org.fluentlenium.core.annotation.PageUrl
@@ -14,5 +14,4 @@ open class StartPage : FluentPage() {
 
     @FindBy(css = "button.i-button")
     lateinit var loginButton: FluentWebElement
-
 }

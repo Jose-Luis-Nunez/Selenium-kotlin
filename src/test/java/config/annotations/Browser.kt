@@ -1,7 +1,6 @@
 package config.annotations
 
 import config.driver.Breakpoint
-import config.driver.Browsers
 
 @Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.RUNTIME)

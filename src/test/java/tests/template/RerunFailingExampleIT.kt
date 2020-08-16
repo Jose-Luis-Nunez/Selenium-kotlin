@@ -1,4 +1,4 @@
-package tests.browser
+package tests.template
 
 import io.github.artsok.RepeatedIfExceptionsTest
 import org.junit.jupiter.api.DisplayName
